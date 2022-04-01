@@ -413,7 +413,7 @@ class _CupertinoBackGestureController<T> {
     required this.navigator,
     required this.controller,
   }) {
-    navigator.didStartUserGesture();
+    // navigator.didStartUserGesture();
   }
 
   final AnimationController controller;
@@ -492,12 +492,12 @@ class _CupertinoBackGestureController<T> {
       // depends on userGestureInProgress.
       late AnimationStatusListener animationStatusCallback;
       animationStatusCallback = (status) {
-        navigator.didStopUserGesture();
+        // navigator.didStopUserGesture();
         controller.removeStatusListener(animationStatusCallback);
       };
       controller.addStatusListener(animationStatusCallback);
     } else {
-      navigator.didStopUserGesture();
+      // navigator.didStopUserGesture();
     }
   }
 }
